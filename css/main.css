@@ -2497,7 +2497,7 @@ footer {
 	font-family: "poppins-regular", sans-serif;
 }
 footer a, footer a:visited {
-	color: #FFFFFF;
+	color: black;
 }
 footer a:hover, footer a:focus {
 	color: #4682b4;
@@ -2531,7 +2531,7 @@ footer .copyright span::after {
 	content: "|";
 	display: inline-block;
 	padding: 0 1rem 0 1.2rem;
-	color: rgba(255, 255, 255, 0.1);
+	color: black;
 }
 footer .copyright span:last-child::after {
 	display: none;
