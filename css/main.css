@@ -960,8 +960,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	font-family: "poppins-bold", sans-serif;
 	color: #313131;
 	text-transform: uppercase;
-	letter-spacing: .2rem;
-	font-size: 1.5rem;
+	letter-spacing: 1px;
+	font-size: 16px;
 	line-height: 2.4rem;
 }
 .skill-bars li .progress {
@@ -971,7 +971,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .skill-bars li .progress span {
 	position: absolute;
-	right: 0;
+	right: -15px;
 	top: -3.6rem;
 	display: block;
 	font-family: "poppins-regular", sans-serif;
@@ -1043,7 +1043,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-	color: #4682b4;
+	color: #4682b4 !important;
 	font-size: 1.6rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
@@ -1087,9 +1087,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  */
 header {
 	position: fixed;
+	left: 0;
+	right: 0;
 	width: 100%;
 	min-height: 66px;
 	z-index: 600;
+	transition: all .3s ease-in-out;
+}
+header.fixed-header {
+	background-color: #fff;
+	box-shadow: 0 0 0 0.5px rgba(0,0,0,0.2);
 }
 header .row {
 	position: relative;
@@ -1099,14 +1106,12 @@ header .top-bar {
 	display: block;
 	min-width: 220px;
 	min-height: 66px;
-	position: absolute;
 	left: 90px;
 	top: 0;
 }
 header .logo {
 	float: left;
 	margin-left: 20px;
-	margin-right: 50px;
 	margin-top: 25px;
 	position: relative;
 }
@@ -1118,8 +1123,8 @@ header .logo a {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 154px;
-	height: 93px;
+	width: 150px;
+	height: 55px;
 	background: url("../images/Untitled.png") no-repeat center;
 	background-size: 267px 115px;
 }
@@ -1131,7 +1136,7 @@ header .logo a {
 .menu-toggle {
 	float: left;
 	width: 40px;
-	height: 99px;
+	height: 60px;
 	margin-left: 20px;
 	margin-top: 13px;
 	display: block;
@@ -1561,9 +1566,9 @@ header .logo a {
 .button-section .button {
 	width: 250px;
 }
-.button-section [class*="col-"] .button:first-child {
+/*.button-section [class*="col-"] .button:first-child {
 	margin-right: 4rem;
-}
+}*/
 
 /**
  * responsive:
@@ -2615,3 +2620,45 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+.list-unstyled {list-style-type: none;}
+.portfolio {padding: 50px 0;}
+.portfolio h2 {font-family: "poppins-semibold", serif; font-size: 3.6rem;line-height: 1.25; text-align: center;margin-bottom: 30px;}
+.portfolio-box {display: flex;display: -ms-flexbox;flex-wrap: wrap;-ms-flex-wrap: wrap;}
+.portfolio-box li {width: 100%;padding: 0 15px;margin-bottom: 30px;}
+.portfolio-box li a {display: block;padding: 20px 0;background-color: #fff;border-radius: 10px;}
+.portfolio-box li:hover,.portfolio-box li:focus {box-shadow: 0 0 4px 1px rgba(0,0,0,.2);}
+.portfolio-box img {width: 100%;max-width: 100px;display: block;margin: 0 auto;}
+.portfolio-box span {margin-top: 15px; padding: 15px 10px;text-align: center;font-family: "poppins-regular", sans-serif; font-size: 2rem;display: block;}
+.foresee {margin-top: 50px;margin-bottom: 50px;}
+.foresee ul {padding-left: 0;margin-left: 0;font-size: 1.5rem;line-height: 1;}
+.foresee li strong{color: #000;font-family: "poppins-semibold", sans-serif;}
+.foresee li p {margin-bottom: 15px;font-family: "poppins-regular", sans-serif;}
+@media (min-width: 576px) {
+		.portfolio-box li {width: 33.33%;}
+}
+@media (min-width: 768px) {
+	
+	.portfolio-box img {max-width: 170px;}
+	#about {padding: 50px 0;}
+	.foresee {margin-top: 80px;}
+}
+@media (min-width: 992px) {
+	.portfolio{padding: 70px 0;}
+		.menu-toggle {height: 70px;}
+		header .logo a {height: 67px;}
+}
+@media (min-width: 1200px) {
+	.portfolio-box img {max-width: 250px;}
+}
+
+
+@media (max-width: 767px) {
+	#about {padding: 50px 0;}
+	.about-content {margin-bottom: 15px;}
+}
+@media (max-width: 575px) {
+	.skill-bars li strong {font-size: 12px; letter-spacing: 0; }
+	.portfolio-box li a {max-width: 250px;margin-left: auto;margin-right: auto;}
+}

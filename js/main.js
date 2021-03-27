@@ -284,7 +284,14 @@
 				jQuery("#go-top").fadeOut(fadeOutTime);
 			}
 
-		}		
+		}
+
+		 if ($(window).scrollTop() >= 50) {
+	        $('header').addClass('fixed-header');
+		    }
+		    else {
+		        $('header').removeClass('fixed-header');
+		    }		
 
 	});		
 
