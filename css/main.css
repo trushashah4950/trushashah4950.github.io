@@ -2255,7 +2255,7 @@ header .logo a {
  */
 #contact {
 	background: #0000;
-/* 	padding-top: 12rem; */
+ 	padding-top: 12rem; 
 	padding-bottom: 7.2rem;
 }
 #contact .section-intro h1 {
